@@ -1,0 +1,12 @@
+C:\Users\evati\source\repos\BookEShopApplication\BookEShop.Repository\obj\Debug\netcoreapp3.1\BookEShop.Repository.csproj.AssemblyReference.cache
+C:\Users\evati\source\repos\BookEShopApplication\BookEShop.Repository\obj\Debug\netcoreapp3.1\BookEShop.Repository.AssemblyInfoInputs.cache
+C:\Users\evati\source\repos\BookEShopApplication\BookEShop.Repository\obj\Debug\netcoreapp3.1\BookEShop.Repository.AssemblyInfo.cs
+C:\Users\evati\source\repos\BookEShopApplication\BookEShop.Repository\obj\Debug\netcoreapp3.1\BookEShop.Repository.csproj.CoreCompileInputs.cache
+C:\Users\evati\source\repos\BookEShopApplication\BookEShop.Repository\bin\Debug\netcoreapp3.1\BookEShop.Repository.deps.json
+C:\Users\evati\source\repos\BookEShopApplication\BookEShop.Repository\bin\Debug\netcoreapp3.1\BookEShop.Repository.dll
+C:\Users\evati\source\repos\BookEShopApplication\BookEShop.Repository\bin\Debug\netcoreapp3.1\BookEShop.Repository.pdb
+C:\Users\evati\source\repos\BookEShopApplication\BookEShop.Repository\bin\Debug\netcoreapp3.1\BookEShop.Domain.dll
+C:\Users\evati\source\repos\BookEShopApplication\BookEShop.Repository\bin\Debug\netcoreapp3.1\BookEShop.Domain.pdb
+C:\Users\evati\source\repos\BookEShopApplication\BookEShop.Repository\obj\Debug\netcoreapp3.1\BookEShop.Repository.csproj.CopyComplete
+C:\Users\evati\source\repos\BookEShopApplication\BookEShop.Repository\obj\Debug\netcoreapp3.1\BookEShop.Repository.dll
+C:\Users\evati\source\repos\BookEShopApplication\BookEShop.Repository\obj\Debug\netcoreapp3.1\BookEShop.Repository.pdb

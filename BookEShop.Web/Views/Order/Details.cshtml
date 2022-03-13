@@ -1,0 +1,42 @@
+﻿@model BookEShop.Domain.DomainModels.Order
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="m-3">
+        <a>Order for: @Model.User.UserName</a>
+    </div>
+
+    @for (int i = 0; i < Model.BooksInOrder.Count; i++)
+    {
+        var item = Model.BooksInOrder.ElementAt(i).SelectedBook;
+
+        if (i % 3 == 0)
+        {
+            @:<div class="row">
+            }
+
+            <div class="card" style="width: 20rem; height: 30rem;">
+                <img class="card-img-top" src="@item.BookImage" style="height: 50%" alt="Image for Book" />
+
+                <div class="card-body">
+                    <h3 class="card-title">@item.BookName</h3>
+                    <p class="card-text">@item.BookAuthor</p>
+                    <p class="card-text">@item.BookGenre</p>
+                    <p class="card-text">Rating: @item.Rating</p>
+
+                    <h6>Price: @item.BookPrice den</h6>
+                </div>
+
+            </div>
+
+            if (i % 3 == 2)
+            {
+            @:</div>
+        }
+    }
+
+</div>

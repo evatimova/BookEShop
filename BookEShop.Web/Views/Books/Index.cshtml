@@ -1,0 +1,84 @@
+﻿@model List<BookEShop.Domain.DomainModels.Book>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="m-3">
+            <a class="btn btn-secondary" asp-controller="Books" asp-action="Create">Add New Book</a>
+        </div>
+    }
+
+    @if (User.IsInRole("Admin"))
+    {
+        <form asp-controller="Books" asp-action="ExportBooksByAuthor" method="post">
+            <div class="row m-3">
+                <div class="col-6">
+                    <input type="text" class="form-control" id="author" name="author">
+                </div>
+                <div class="col-6">
+                    <button type="submit" class="btn btn-info">
+                        Export Books by Author
+                    </button>
+                </div>
+            </div>
+        </form>
+        <form asp-controller="Books" asp-action="ExportBooksByGenre" method="post">
+            <div class="row m-3">
+                <div class="col-6">
+                    <input type="text" class="form-control" id="genre" name="genre">
+                </div>
+                <div class="col-6">
+                    <button type="submit" class="btn btn-info">
+                        Export Books by Genre
+                    </button>
+                </div>
+            </div>
+        </form>
+    }
+    <br />
+
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        var item = Model[i];
+
+        if (i % 3 == 0)
+        {
+            @:<div class="row">
+            }
+
+            <div class="card" style="width: 20rem; height: 40rem;">
+                <img class="card-img-top" src="@item.BookImage" style="height: 50%" alt="Image for Book" />
+
+                <div class="card-body">
+                    <h3 class="card-title">@item.BookName</h3>
+                    <p class="card-text">@item.BookAuthor</p>
+                    <p class="card-text">@item.BookGenre</p>
+                    <p class="card-text">Rating: @item.Rating</p>
+
+                    <h6>Price: @item.BookPrice den</h6>
+                </div>
+
+                <div class="card-footer">
+                    <a asp-controller="Books" asp-action="AddBookToCard" asp-route-id="@item.Id" class="btn btn-info">Add to Card</a>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-controller="Books" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-secondary">Edit</a>
+                    }
+                </div>
+
+            </div>
+
+            if (i % 3 == 2)
+            {
+            @:</div>
+        }
+    }
+
+</div>
+
+
